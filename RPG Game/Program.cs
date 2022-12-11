@@ -32,7 +32,7 @@
                 Boss boss = new Boss();
 
                 //Perform the game loop.
-                GameLoop(boss, random, player, 50, 25);
+                GameLoop(boss, random, player, 50, 35);
 
                 //Check if the player was the one who died.
                 if (!player.isDead)
@@ -92,8 +92,14 @@
                         for (int i = 0; i < 2; i++)
                         {
                             //Apply attack damage to enemy.
-                            enemy.GetsHit(random.Next(10, max_player_attack_power));
+                            enemy.GetsHit(random.Next(10, max_attack_power));
 
+                            //Check if enemy is dead.
+                            if (enemy.isDead)
+                            {
+                                //Break out of for loop.
+                                break;
+                            }
                         }
 
                         break;
@@ -110,7 +116,7 @@
                         Console.WriteLine("You choose to heal!");
 
                         //Heal the player a random amount.
-                        player.Heal(random.Next(30));
+                        player.Heal(random.Next(30, 30));
 
                         break;
                     default:
