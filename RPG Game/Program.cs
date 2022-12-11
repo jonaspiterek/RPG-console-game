@@ -56,7 +56,7 @@
         private static void GameOver()
         {
             //Player is dead. Game is over.
-            Console.WriteLine("GAME OVER!!!");
+            Console.WriteLine("\n\nGAME OVER!!!\n\n\n");
         }
 
         private static void GameLoop(Enemy enemy, Random random, Player player, int max_attack_power, int max_player_attack_power)
