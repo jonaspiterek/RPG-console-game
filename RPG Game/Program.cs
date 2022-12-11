@@ -38,7 +38,7 @@
                 if (!player.isDead)
                 {
                     //Player won the game.
-                    Console.WriteLine("Congradulations " + player.Name + " you defeated all the enemies and saved the kingdom!!!");
+                    Console.WriteLine("\n\nCongradulations " + player.Name + " you defeated all the enemies and saved the kingdom!!!");
                 }
                 else
                 {
